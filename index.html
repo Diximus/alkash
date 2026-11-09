@@ -28,6 +28,14 @@
 @media(max-width:680px){.live-counter{padding:21px 17px;gap:17px}.live-counter-copy{min-width:0}.live-timer{gap:4px}.timer-unit{min-width:0;flex:1}.timer-value{font-size:clamp(21px,7vw,32px);letter-spacing:-1px}.timer-days .timer-value{font-size:clamp(28px,8vw,40px)}.timer-label{font-size:8px;letter-spacing:.3px;margin-top:6px}.timer-separator{font-size:22px;padding-top:0}.timer-milliseconds .timer-value{font-size:clamp(17px,5.5vw,24px)}.timer-milliseconds{flex:0 0 auto;min-width:31px}}
 @media(max-width:360px){.timer-value{font-size:19px}.timer-days .timer-value{font-size:26px}.timer-milliseconds .timer-value{font-size:16px}.timer-separator{font-size:18px}}
 
+
+/* Дополнительные отступы и порядок карточек на мобильных */
+.content-grid{margin-top:18px}
+@media(max-width:850px){
+  .hero .ring-card{order:1}
+  .hero .main-card{order:2}
+}
+
 </style></head>
 <body><div class="app">
 <header class="topbar fade-in"><div class="brand"><div class="brand-mark">✦</div><div><div class="brand-name">ТРЕЗВЫЙ КУРС</div><div class="brand-sub">Твой путь. Твой темп. Твоя победа.</div></div></div><div class="top-date" id="todayLabel">—</div></header>
