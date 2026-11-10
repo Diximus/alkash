@@ -110,7 +110,7 @@ if (class_exists('DOMDocument')) {
                 if (preg_match('/^(Праздники|Завтра|Послезавтра|Сегодня|В народном календаре|Именины|Хроника|Персоны дня|\.\.\.)/ui', $name)) continue;
                 if (preg_match('/^\d{1,2}\s+[а-яё]+\s+\d{4}/ui', $name)) break;
                 if (preg_match('/^(Image|Праздники России|Международные праздники)/ui', $name)) continue;
-                if (mb_strlen($name, 'UTF-8') < 4) continue;
+                if (strlen($name) < 6) continue;
                 if (!in_array($name, $holidays, true)) $holidays[] = $name;
             }
         }
@@ -126,7 +126,7 @@ if (!$holidays) {
     $pattern = '/' . preg_quote($heading, '/') . '[^\r\n]*[\r\n]+([^\r\n]+)/u';
     if (preg_match($pattern, $plain, $match)) {
         $candidate = trim($match[1]);
-        if ($candidate !== '' && mb_strlen($candidate, 'UTF-8') > 3) $holidays[] = $candidate;
+        if ($candidate !== '' && strlen($candidate) > 6) $holidays[] = $candidate;
     }
 }
 
